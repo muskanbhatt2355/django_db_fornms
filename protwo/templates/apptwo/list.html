@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Our Users</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<h1>Here are your users for apptwo</h1>
+
+	{% if users %}
+		<ol>
+			{% for person in users %}
+			
+				<li>user Info
+					<ul>
+						<li>First Name: {{ person.first_name }}</li>
+						<li>Last Name: {{ person.last_name }}</li>
+						<li>Email: {{ person.email }}</li>
+					</ul>
+				</li>
+			{% endfor %}
+		</ol>	
+
+
+	{% endif %}
+</body>
+</html>
